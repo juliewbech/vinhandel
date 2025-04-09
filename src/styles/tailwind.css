@@ -1,11 +1,10 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
-
-@theme {
-  /* Her tilføjes theme variable // tokens */
+@plugin "daisyui" {
+  themes: cupcake;
 }
 
 @layer base {
@@ -18,9 +17,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
