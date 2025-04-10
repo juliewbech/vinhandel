@@ -1,17 +1,22 @@
 ---
+const { url="#", cardimage="", cardimagealt="", cardtitel="", cardtekst="", cardbuttontekst="",
+  badgenyt="false", badgerabat="false", badgefaatilbage="" } = Astro.props;
 ---
 
-<div class="card bg-base-100 w-96 shadow-sm">
-    <figure>
+<div class="card bg-base-100 w-full shadow-sm">
+    <figure class="relative">
+      {(badgenyt === "true") && <div class="badge badge-primary absolute top-4 left-0">Ny vin</div>}
+      {(badgerabat !== "false") && <div class="badge badge-secondary absolute rounded-full top-4 right-0 hover:rotate-6 transition-all"><span>{badgerabat}Rabat</span></div>}
+      {(badgefaatilbage === "true") && <div class="badge badge-warning @sm:badge-xl absolute bottom-4 left-0">Kun få flasker tilbage</div>}
       <img
-        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-        alt="Shoes" />
+       src={cardimage}
+       alt={cardimagealt} />
     </figure>
     <div class="card-body">
-      <h2 class="card-title">Card Title</h2>
-      <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+      <h2 class="card-title">{cardtitel}</h2>
+      <p>{cardtekst}</p>
       <div class="card-actions justify-end">
-        <button class="btn btn-primary">Buy Now</button>
+        <a href={url} class="btn btn-primary">{cardbuttontekst}</a>
       </div>
     </div>
   </div>
