@@ -7,31 +7,40 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Card from '../components/Card.astro';
 import Card2 from '../components/Card2.astro';
 import Form from '../components/Form.astro';
+import Header from '../components/Header.astro';
 ---
 <MainLayout title="Titel">
 	
-    <!-- Hero Unit Section -->
-    <section>
+	<section>
 		<div
-	class="hero min-h-screen"
-	style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
-	<div class="hero-overlay"></div>
-	<div class="hero-content text-neutral-content text-center">
-	  <div class="max-w-md">
-		<h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-		<p class="mb-5">
-		  Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-		  quasi. In deleniti eaque aut repudiandae et a id nisi.
-		</p>
-		<button class="btn btn-primary">Get Started</button>
-	  </div>
-	</div>
-  </div>
+		  class="hero min-h-screen relative"
+		  style="background-image: url('wineyard.webp');">
+		  
+		  <!-- Header placeres absolut -->
+		  <div class="fixed top-2 p-2 w-full z-50">
+			<Header />
+		  </div>
+	  
+		  <!-- Overlay -->
+		  <div class="hero-overlay"></div>
+	  
+		  <!-- Content -->
+		  <div class="hero-content text-neutral-content text-center">
+			<div class="max-w-md">
+			  <h1 class="mb-5 text-7xl font-bold">Østersøens vinhandel</h1>
+			  <p class="mb-5">
+				Vi byder velkommen til Østersøens vinhandel!
+				En familieejet virksomhed placeret i hjertet på Bornholm, med stor kærlighed og ekspertise til rødvin.
+			  </p>
+			  <button class="btn btn-primary">Se vores udvalg</button>
+			</div>
+		  </div>
+		</div>
 	  </section>
   
 	  <!-- Section 1 -->
-	  <section>
-		<div class="stats shadow">
+	  <section class="py-25 flex justify-center px-4">
+		<div class="stats stats-vertical lg:stats-horizontal shadow w-full max-w-4xl">
 		  <div class="stat">
 			<div class="stat-figure text-secondary">
 			  <svg
@@ -46,9 +55,9 @@ import Form from '../components/Form.astro';
 				  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 			  </svg>
 			</div>
-			<div class="stat-title">Downloads</div>
+			<div class="stat-title">Flasker solgt</div>
 			<div class="stat-value">31K</div>
-			<div class="stat-desc">Jan 1st - Feb 1st</div>
+			<div class="stat-desc">2021</div>
 		  </div>
 		
 		  <div class="stat">
@@ -65,7 +74,7 @@ import Form from '../components/Form.astro';
 				  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
 			  </svg>
 			</div>
-			<div class="stat-title">New Users</div>
+			<div class="stat-title">Abonnenter</div>
 			<div class="stat-value">4,200</div>
 			<div class="stat-desc">↗︎ 400 (22%)</div>
 		  </div>
@@ -84,22 +93,22 @@ import Form from '../components/Form.astro';
 				  d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
 			  </svg>
 			</div>
-			<div class="stat-title">New Registers</div>
+			<div class="stat-title">Leveringer</div>
 			<div class="stat-value">1,200</div>
-			<div class="stat-desc">↘︎ 90 (14%)</div>
+			<div class="stat-desc">↗︎ 200 (11%)</div>
 		  </div>
 		</div>
 	  </section>
 	  
 	   <!-- Section 2 -->
-		<section class="container mx-auto m-sectiontop px-4">
-			<h2 class="text-3xl m-sectionheading">Tørstig efter en flaske?</h2>
+		<section class="container mx-auto m-sectiontop px-4 pt-15">
+			<h2 class="text-3xl m-sectionheading pb-4">Se vores populære rødvine her</h2>
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 				<Card
 				url="/singleview"
-				cardimage="roseflaske.jpg"
-				cardimagealt="Roséchampange"
-				cardtitel="Rosado Brut"
+				cardimage="wine1.webp"
+				cardimagealt="1"
+				cardtitel="Toscano Montale"
 				cardtekst="Er det rosé eller rosé? Det er rosé!"
 				cardbuttontekst="Køb mere" 
 				badgenyt="true"
@@ -108,77 +117,77 @@ import Form from '../components/Form.astro';
 				></Card>
 				<Card
 				url="/singleview"
-				cardimage="roseflaske.jpg"
-				cardimagealt="Roséchampange"
-				cardtitel="Rosado Brut"
+				cardimage="wine2.webp"
+				cardimagealt="2"
+				cardtitel="Wine Bar"
 				cardtekst="Er det rosé eller rosé? Det er rosé!"
 				cardbuttontekst="Køb mere" 
-				badgenyt="true"
+				badgenyt="false"
 				badgerabat="false"
 				badgefaatilbage="false"
 				></Card>
 				<Card
 				url="/singleview"
-				cardimage="roseflaske.jpg"
-				cardimagealt="Roséchampange"
-				cardtitel="Rosado Brut"
+				cardimage="wine3.webp"
+				cardimagealt="3"
+				cardtitel="Castro"
 				cardtekst="Er det rosé eller rosé? Det er rosé!"
 				cardbuttontekst="Køb mere" 
-				badgenyt="true"
+				badgenyt="false"
 				badgerabat="false"
 				badgefaatilbage="false"
 				></Card>
 				<Card
 				url="/singleview"
-				cardimage="roseflaske.jpg"
-				cardimagealt="Roséchampange"
-				cardtitel="Rosado Brut"
+				cardimage="wine4.webp"
+				cardimagealt="4"
+				cardtitel="Bourgogne Hautes-Cotes de Beaune"
 				cardtekst="Er det rosé eller rosé? Det er rosé!"
 				cardbuttontekst="Køb mere" 
-				badgenyt="true"
-				badgerabat="false"
+				badgenyt="false"
+				badgerabat="true"
 				badgefaatilbage="false"
 				></Card>
 			</div>
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 				<Card
 				url="/singleview"
-				cardimage="roseflaske.jpg"
-				cardimagealt="Roséchampange"
-				cardtitel="Rosado Brut"
+				cardimage="wine5.webp"
+				cardimagealt="5"
+				cardtitel="Bourgogne Hautes-Cotes"
 				cardtekst="Er det rosé eller rosé? Det er rosé!"
 				cardbuttontekst="Køb mere" 
-				badgenyt="true"
+				badgenyt="false"
 				badgerabat="false"
 				badgefaatilbage="false"
 				></Card>
 				<Card
 				url="/singleview"
-				cardimage="roseflaske.jpg"
-				cardimagealt="Roséchampange"
-				cardtitel="Rosado Brut"
+				cardimage="wine6.webp"
+				cardimagealt="6"
+				cardtitel="Chateau Biston"
 				cardtekst="Er det rosé eller rosé? Det er rosé!"
 				cardbuttontekst="Køb mere" 
-				badgenyt="true"
+				badgenyt="false"
 				badgerabat="false"
 				badgefaatilbage="false"
 				></Card>
 				<Card
 				url="/singleview"
-				cardimage="roseflaske.jpg"
-				cardimagealt="Roséchampange"
-				cardtitel="Rosado Brut"
+				cardimage="wine7.jpg"
+				cardimagealt="7"
+				cardtitel="Talamonti"
 				cardtekst="Er det rosé eller rosé? Det er rosé!"
 				cardbuttontekst="Køb mere" 
-				badgenyt="true"
+				badgenyt="false"
 				badgerabat="false"
-				badgefaatilbage="false"
+				badgefaatilbage="true"
 				></Card>
 				<Card
 				url="/singleview"
-				cardimage="roseflaske.jpg"
-				cardimagealt="Roséchampange"
-				cardtitel="Rosado Brut"
+				cardimage="wine8.webp"
+				cardimagealt="8"
+				cardtitel="Rasteau"
 				cardtekst="Er det rosé eller rosé? Det er rosé!"
 				cardbuttontekst="Køb mere" 
 				badgenyt="true"
@@ -189,13 +198,72 @@ import Form from '../components/Form.astro';
 	</section>
 	  
 	   <!-- Section 3 -->
-	   <section class="grid grid-cols-2">
-		<div>
-		<Card2></Card2>
-	  </div>
-	  <div>
-		<Card2></Card2>
-	  </div>
+	   <section class="container mx-auto m-sectiontop px-4 pt-15">
+		<div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
+			<div class="card bg-base-100 w-full shadow-sm">
+				<div class="card-body">
+				  <span class="badge badge-xs badge-warning">Standard</span>
+				  <div class="flex justify-between">
+					<h2 class="text-3xl font-bold">Lidt tørstig</h2>
+					<span class="text-xl">229,- / måned</span>
+				  </div>
+				  <ul class="mt-6 flex flex-col gap-2 text-xs">
+					<li>
+					  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+					  <span>3 flasker om måneden</span>
+					</li>
+					<li>
+					  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+					  <span>Magasin</span>
+					</li>
+					<li class="opacity-50">
+					  <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+					  <span class="line-through">Overraskelseskurv</span>
+					</li>
+					<li class="opacity-50">
+						<svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+						<span class="line-through">Fri</span>
+					  </li>
+				  </ul>
+				  <div class="mt-6">
+					<button class="btn btn-primary btn-block">Læg i kurven</button>
+				  </div>
+				</div>
+			</div>
+
+			<div class="card bg-base-100 w-full shadow-sm">  
+			  <div class="card-body">
+				<span class="badge badge-xs badge-warning">Luksus</span>
+				<div class="flex justify-between">
+				  <h2 class="text-3xl font-bold">Meget tørstig</h2>
+				  <span class="text-xl">449,- / måned</span>
+				</div>
+				<ul class="mt-6 flex flex-col gap-2 text-xs">
+				  <li>
+					<svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+					<span>6 flasker om måneden</span>
+				  </li>
+				  <li>
+					<svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+					<span>Magasin</span>
+				  </li>
+				  <li>
+					<svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+					<span>Overraskelses kurv</span>
+				  </li>
+				  <li>
+					<svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+					<span>Fri fragt</span>
+				  </li>
+				</ul>
+				<div class="mt-6">
+				  <button class="btn btn-primary btn-block">Læg i kurven</button>
+				</div>
+			  </div>
+			
+			</div>
+		</div>
+	</div>
 	  </section>
 	  
 	   <!-- Section 4 -->

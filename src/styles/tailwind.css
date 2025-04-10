@@ -4,7 +4,7 @@
 @plugin '@tailwindcss/forms';
 
 @plugin "daisyui" {
-  themes: cupcake;
+  themes: garden;
 }
 
 @layer base {
