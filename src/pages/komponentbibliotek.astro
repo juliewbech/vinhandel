@@ -13,9 +13,17 @@ import Header from '../components/Header.astro';
 
 <MainLayout title="Komponentbibliotek">
 
+    
+    
     <div class="top-2 p-2 w-full z-50">
         <Header />
-      </div>
+    </div>
+
+
+    <section>
+        <Heading htmlheading="h1" size="xlarge">Komponentbibliotek</Heading>
+        <hr class="mt-20 border-accent">
+    </section>
 
 <!-- start på buttons -->
 <section class="container mx-auto m-sectiontop px-4">
@@ -31,6 +39,21 @@ import Header from '../components/Header.astro';
     <hr class="mt-20 border-accent">
     </section>
     <!-- slut på buttons -->
+
+    <!-- start på links -->
+<section class="container mx-auto m-sectiontop px-4">
+    <Heading htmlheading="h2" size="large" stylingclasses="m-sectionheading">Links</Heading>
+    <p><Link>Default link:</Link> Default linket er den del af en tekst, og burde fungere som et <Link>Link</Link></p>
+    <p><Link href="#" variant="primary">Variant primary</Link></p>
+    <p><Link href="#" variant="primary" size="small">Variant primary size small</Link></p>
+    <p><Link href="#" variant="primary" size="medium">Variant primary size medium</Link></p>
+    <p><Link href="#" variant="primary" size="large">Variant primary size large</Link></p>
+    <p><Link href="#" variant="secondary" size="small">Variant secondary size small</Link></p>
+    <p><Link href="#" variant="secondary" size="medium">Variant secondary size medium</Link></p>
+    <p><Link href="#" variant="secondary" size="large">Variant secondary size large</Link></p>
+    <hr class="mt-20 border-accent">
+    </section>
+    <!-- slut på links -->
 
 
     <!-- start på typografi -->
