@@ -1,4 +1,7 @@
 ---
+import Heading from '../components/Heading.astro';
+import Link from '../components/Link.astro';
+
 const { url="#", cardimage="", cardimagealt="", cardtitel="", cardtekst="", cardbuttontekst="",
   badgenyt="false", badgerabat="false", badgefaatilbage="" } = Astro.props;
 ---
@@ -13,10 +16,10 @@ const { url="#", cardimage="", cardimagealt="", cardtitel="", cardtekst="", card
        alt={cardimagealt} />
     </figure>
     <div class="card-body">
-      <h2 class="card-title">{cardtitel}</h2>
+      <Heading htmlheading="h2" size="medium" Stylingclasses="card-titel">{cardtitel}</Heading>
       <p>{cardtekst}</p>
       <div class="card-actions justify-end">
-        <a href={url} class="btn btn-primary">Læg i kurven</a>
+        <Link href={url} variant="primary" size="medium">{cardbuttontekst}</Link>
       </div>
     </div>
   </div>
